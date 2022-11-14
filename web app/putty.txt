@@ -1,0 +1,12 @@
+sudo apt update
+sudo apt install docker.io
+y
+sudo systemctl status docker
+control c or :wq
+git clone https://github.com/rdborkar26/practice.git
+ls
+will show folders
+cd to that floder
+sudo docker build -t foldername .
+sudo docker images
+sudo docker run --name servername -d -p 9000:9000 foldername
