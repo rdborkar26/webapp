@@ -1,0 +1,60 @@
+================================================================================================
+Q1. Access the nodejs file using aws server online.
+ans::
+	1. Create an instance on aws -> select aws linux -> create a key.
+	2. Go to the security -> security groups -> add inbound rule -> select all traffic and anywhere ipv4.
+	3. Connect to the instance
+	4. sudo yum update
+	5. sudo yum install git
+	6. sudo yum -y install curl
+	7. curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
+	8. sudo yum install -y nodejs
+	9. git clone (git should contain public folder, server.js)
+	10. cd into repository_name
+	11. npm install express
+	12. node server.js
+================================================================================================
+
+Q2. access the nodejs file using puTTY.
+ans::
+	1. Create aws instance
+	2. Open security group and add all traffic and anywhere ipv4
+	    Copy public ip address
+
+	3. Open github webpage and login to your account
+	    There should be a repository containing dockerfile, server.js, package.json, profile and public folder.
+	    a. git clone sir's repo on your desktop
+	    b. create a new repo in your git account and clone it on your desktop
+	    c. transfer above files from sir's repo folder to your repo folder.
+	    d. open cmd of your repo and git add . -> git commit -m "added" -> git push origin main
+
+	4. Open puTTY
+	    paste public ip
+	    Category -> Connections -> data -> give name "Ubuntu"
+					     auth -> credentials -> add key.(should be same as aws key)
+	5. click Open -> accept.
+
+	6. sudo apt update
+	7. sudo apt install docker.io
+	8. sudo apt update git
+
+	9. sudo docker pull nginx
+	10. sudo docker run --name server_name -d -p 8080:80 nginx:latest
+
+	11. git clone (your repo link found on git website)
+	       cd repo_name  (go into the repo folder)
+	       sudo docker build -t repo_name .
+	       sudo docker run --name server_name -d -p 9000:9000 repo_name
+
+	12. open webpage and paste
+	       http://aws_server_ip:9000
+================================================================================================
+((((Optional Question))))
+Q3. input the given abstract into jira software and perform respective steps.
+ans::
+	1. Read the abstract given by sir.
+	2. create issues in the backlog
+	3. assign issues to employees.
+	4. initiate sprint with specific time.
+	5. done.
+================================================================================================

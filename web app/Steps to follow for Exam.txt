@@ -1,0 +1,74 @@
+steps to follow 
+1.open github
+
+2.create one repository
+ 
+3.create one local repository and clone repository on web into this repository
+
+4.copy files given by sir in this repo
+
+5.now open cmd in this repo
+
+6.now download node_modules by using npm install express command
+
+7.create one .gitignore file
+
+8.put name of files and folder you want to ignore in .gitignore file
+    # after all git operations take screenshot of git commands 
+
+9.now push these files into repository on web
+   # take screeshot of the repository
+
+10.now open your aws account 
+--go to services -->compute -->EC2-->launch instances-->name-->select ubuntu-->create key-->launch instance-->view all instances
+   # take screenshot which contains public Ipv4 and launch time
+
+--now click on instance id-->security-->security groups-->edit inbound rules-->add rule-->type-all traffic -->source- anywhere IPv4-->save rules. 
+     # take screenshot of security inbound rules
+
+11.open putty--> copy ip address of instance from aws paste into host name-->data give username ubuntu-->ssh-->Auth-->credentials- browse key created in aws  --> open -->accept
+
+12.commands to give on putty
+	$ sudo apt update
+	$ sudo apt install docker.io
+	$ sudo systemctl status docker
+            # take screenshot 
+
+	$ sudo docker pull nginx
+	$ sudo docker images (screenshot)
+            # take screenshot of images
+
+	$ sudo docker ps
+	$ sudo docker run --name server1 -d -p 8080:80 nginx:latest
+	$ git clone -->clone repository
+             # take screenshot of clone command
+
+	$ ls
+	$ cd repository name
+	$ ls
+	$ sudo docker build -t repName .
+	$ sudo docker run --name ietweb -d -p 9000:9000 repoName
+        $ sudo docker ps
+          # take screenshot running containers
+
+       $ search on Chrome ----> http://instance ip address:port No
+          # take screenshot of webpage
+
+
+_____________________________________________________________________
+    
+if anyone facing problem about login user :-
+       git config --global user.email "email@id"
+       git config --global user.name <name> 
+
+problem 403 error :-
+       git config --global Credential.useHttpPath true
+_____________________________________________________________________
+
+commands for put machine behind proxy / remove machine from proxy 
+
+setting http.proxy for git s:-
+git config --global http.proxy 192.168.10.4:808
+
+unsetting http.proxy for git :-
+git config --global --unset http.proxy
